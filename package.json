@@ -1,0 +1,21 @@
+{
+  "name": "bag_rpg",
+  "version": "1.0.0",
+  "description": "bag estilizada para prg",
+  "main": "index.js",
+  "author": "David Tinoco",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js ",
+    "test": "echo \"Error: no teste specified\"&& exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "connect-flash": "^0.1.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.3.2"
+  }
+}
