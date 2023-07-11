@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 
 router.get('/categorias', (req, res) => {
     Categoria.find().lean().then((categorias)=>{
-        res.render("admin/categoria", {categorias: categorias})
+        res.render("admin/categoria/categoria", {categorias: categorias})
     }).catch((err) => {
         req.flash('error', "Houve um erro ao registar a categoria");
         res.redirect("/admin")

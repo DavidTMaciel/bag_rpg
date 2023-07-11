@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/categorias/add', (req,res)=>{
-    res.render('admin/addcategorias');
+    res.render('admin/categoria/addcategorias');
 });
 
 router.post('/categorias/nova', (req,res)=>{

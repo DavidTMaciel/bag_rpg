@@ -8,12 +8,14 @@ router.get('/', (req, res) => {
     res.render("../views/admin/categoria/admin");
 });
 
-router.delete('/', (req, res) => {
+router.post('/categorias/deletar', (req, res) => {
     Categoria.deleteOne({ _id: req.body.id }).then(() => {
         req.flash("succes_msg", "Categoria deletada com sucesso")
-        res.redirect("/admin/categorias")
+        res.redirect("/admin/categoria/categorias")
     }).catch(() => {
         req.flash("error_msg", "Houve um erro ao deletar a categoria")
-        res.redirect("/admin/categorias")
+        res.redirect("/admin/categoria/categorias")
     })
 });
+
+module.exports = router;
