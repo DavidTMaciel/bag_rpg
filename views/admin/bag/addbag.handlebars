@@ -1,0 +1,19 @@
+{{#each erros}}
+    <div class="alet alert-danger">{{text}}</div>
+{{else}}
+{{/each}}
+<h3>Nova Bag</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/bag/nova" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome da categoria" class="form-control">
+            <label for="slug">Espaco:</label>
+            <input type="number" name="espaco" id="espaco" placeholder="slug da categoria" class="form-control">
+            <label for="img">Img</label>
+            <input type="text" name="img" id="img" placeholder="ulr" class="form-control">
+            <br />
+            <button type="submit" class="btn btn-success">Criar Bag</button>
+        </form>
+    </div>
+</div>
