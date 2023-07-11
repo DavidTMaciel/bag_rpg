@@ -1,0 +1,8 @@
+.container-principal-card{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: blue;
+    color: blue;
+
+}
