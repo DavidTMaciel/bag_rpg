@@ -3,15 +3,16 @@ const Schema = mongoose.Schema;
 
 const Bags = new Schema({
     nome:{
-        typeof: 'string',
+        type: 'string',
         require:true
     },
     espaco:{
-        type: 'Number',
+        type: Number,
         require:true
     },
     itens:{
         type: 'String',
+        
     },
     img:{
         type: 'String',
