@@ -10,10 +10,8 @@ const Bags = new Schema({
         type: Number,
         require:true
     },
-    itens:{
-        type: 'String',
-        
-    },
+    itens: { type: Schema.Types.ObjectId, ref: 'Itens' },
+    
     img:{
         type: 'String',
         require: true

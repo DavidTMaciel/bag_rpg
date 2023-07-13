@@ -21,3 +21,4 @@ const Itens = new Schema({
         type: 'Number',
     }
 })
+mongoose.model('Itens', Itens);
