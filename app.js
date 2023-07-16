@@ -13,6 +13,8 @@ const editarCategoria = require('./routes/admin/categoria/editar_categoria')
 const deletarCategorias= require('./routes/admin/categoria/deletar_categoria');
 const addBag = require('./routes/admin/bag/addbag');
 const listarBag = require('./routes/admin/bag/listar_bag');
+const addIten = require('./routes/admin/bag/add_itens');
+const listarItens = require('./routes/admin/bag/listar_itens');
 require("./config/auth")(passport)
 
 
@@ -65,6 +67,8 @@ app.use('/admin', editarCategoria);
 app.use('/admin', deletarCategorias);
 app.use('/admin',addBag);
 app.use('/admin', listarBag);
+app.use('/admin', addIten);
+app.use('/admin', listarItens)
 
 app.get('/', (req, res) => {
     res.render("index")
