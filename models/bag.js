@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+require('./itens')
+const Itens = mongoose.model('Itens')
 
 const Bags = new Schema({
     nome:{
@@ -10,7 +12,7 @@ const Bags = new Schema({
         type: Number,
         require:true
     },
-    itens: { type: Schema.Types.ObjectId, ref: 'Itens' },
+    itens: [{ type: Schema.Types.ObjectId, ref: Itens }],
     
     img:{
         type: 'String',
