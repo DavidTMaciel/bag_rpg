@@ -1,6 +1,6 @@
 <h2>Mochila dos Player</h2>
 <hr>
-<a href="/admin/bag/add"><button class="btn btn-success">Nova Categoria</button></a>
+<a href="/admin/bag/add"><button class="btn btn-success">Nova Mochila</button></a>
 {{#each bag}}
     <div class="card" style="width: 18rem;">
         <img src={{img}} class="card-img-top">
@@ -12,6 +12,8 @@
                 <input type="hidden" name="id" value="{{_id}}">
                 <button type="submit"class="btn btn-danger mt-2">Deletar</button>
             </form>
+            <a  href="/admin/bag/adicionar/{{_id}}"><button class="btn btn-info mt-4">Adicionar item</button></a>
+            <a href="/admin/bag/listar/itens/{{_id}}"><button>Entrar</button></a>
         </div>
     </div>
     {{else}}

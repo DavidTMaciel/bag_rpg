@@ -1,0 +1,33 @@
+<form action="/admin/bag/adicionar" method="post">
+    <input type="hidden" name="id" value="{{bagId}}">
+    <label>Item</label>
+    <input type="text" name="itens" value="">
+    <label>Custo</label>
+    <input type="number" name="custo" value="">
+    <label>Origem</label>
+    <input type="text" name="origem" value="">
+    <label>Descricao</label>
+    <input type="text" name="descricao" value="">
+    <label>quantidade</label>
+    <input type="number" name="quantidade" value="">
+    <button type="submit">Adicionar</button>
+</form>
+
+{{#each itens}}
+
+<div>
+    <h5>Nome: {{nome}}</h5>
+    <h5>Custo: {{custo}}</h5>
+    <h5>Origem: {{origem}}</h5>
+    <h5>Descricao: {{descricao}}</h5>
+    <h5>Quantidade: {{quantidade}}</h5>
+</div>
+{{else}}
+<div>
+    <p>Não existe itens adicionados</p>
+</div>
+<p>bagId: {{bagId}}</p>
+<p>itens: {{itens}}</p>
+
+
+{{/each}}
